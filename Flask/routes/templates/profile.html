@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+<link rel="stylesheet" href="{{ url_for('static', filename='styleprof.css') }}">
+{% endblock%}
+
+{% block body %}
+<section class="seccion-perfil-usuario">
+    <div class="perfil-usuario-header">
+        <div class="perfil-usuario-portada">
+            <div class="perfil-usuario-avatar">
+                <img src="https://w7.pngwing.com/pngs/39/800/png-transparent-computer-icons-user-silhouette-drawing-silhouette-cdr-animals-eps.png" alt="img-avatar">
+            </div>
+        </div>
+    </div>
+    <div class="perfil-usuario-body">
+        <div class="perfil-usuario-bio">
+            <h3 class="titulo">{{ name }}</h3>
+            <h3 class="titulo">{{ sname }}</h3>
+        </div>
+        <div class="perfil-usuario-footer">
+            <ul class="lista-datos">
+                <li><b> Direccion de usuario:</b>  {{ dire }}</li>
+                <li> <b>Telefono:</b> {{ numer }} </li>
+            </ul>
+            <ul class="lista-datos">
+                <li> <b>E-mail:</b> {{ mail }}</li>
+                <li><b>Fecha nacimiento:</b> {{ date }}</li>
+            </ul>
+        </div>
+        
+    </div>
+</section>
+{% endblock %}
+

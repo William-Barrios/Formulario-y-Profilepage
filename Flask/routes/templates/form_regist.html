@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+<link rel="stylesheet" href="{{ url_for('static', filename='stylereg.css') }}">
+{% endblock%}
+
+{% block body %}
+<form class="form" action="{{ url_for('profile') }}" method="post">
+    <div class="form_container">
+        <h2 class="form_title">Registro</h2>
+        <input type="text" class="form__input" name="nombre" placeholder="Enter Your Name">
+        <input type="text" class="form__input" name="apellido" placeholder="Enter Your Second name">
+        <input type="text" class="form__input" name="direccion" placeholder="Enter Your Direction">
+        <input type="text" class="form__input" name="numero" placeholder="Enter Your Cellphone number">
+        <input type="email" class="form__input" name="E-mail" placeholder="Enter Your Email">
+        <div class="fech">
+            <h3>Fecha de nacimiento:  </h3>
+            <input type="date" class="form__input" name="fecha">
+        </div>    
+        <button class="form_cta">Submit</button>
+    </div>
+{% endblock %}
